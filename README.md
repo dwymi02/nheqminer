@@ -4,6 +4,10 @@ This version of nheqminer is a continuation of the development effort, with the 
 
 * This version of nheqminer supports both CPU and GPU (NVIDIA CUDA) ZEC mining
 
+
+<img src="https://github.com/dwymi02/nheqminer/blob/master/Starting%20nheqminer.png" width="619" >
+
+
 #### Table of contents
 * [Features](#features)
 * [Download](#download)
