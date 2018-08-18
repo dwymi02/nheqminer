@@ -17,8 +17,8 @@ This version of nheqminer is a continuation of the development effort, with the 
 
 ## Features
 * Decent performance
-* Windows support [for now, provided by nicehash](https://github.com/nicehash/nheqminer/releases)
-* Linux support (tested on Ubuntu 18.04 LTS
+* Windows support for now, [provided by nicehash](https://github.com/nicehash/nheqminer/releases)
+* Linux support (tested on Ubuntu 18.04 LTS)
 * Stratum protocol support
 
 
@@ -80,7 +80,8 @@ Example to CPU mine, using your own wallet and worker id, on nanopool USA server
 
         nheqminer -l zec-us-east1.nanopool.org:16666 -u YOUR_WALLET/YOUR_WORKER/YOUR_EMAIL@PROVIDER.com -p x -t [num_thrds]
 
-For more information, refer to https://zec.nanopool.org/help
+Additional information about mining ZEC on nanopool please refer to https://zec.nanopool.org/help
+Additional mining pools for your consideration available @ https://investoon.com/mining_pools/zec
 
 
 <i>Note: if you have a 4-core CPU with hyper threading enabled (total 8 threads) it is best to run with only 6 threads (experimental benchmarks shows that best results are achieved with 75% threads utilized)</i>
@@ -129,8 +130,9 @@ Working solvers CPU_TROMP, CPU_XENONCAT, CUDA_TROMP, CUDA_DJEZO
 
 ### General instructions
   - NVIDIA CUDA, refer to installation instructions via URL:
-    http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf
-    The CUDA Toolkit can be downloaded from URL: https://developer.nvidia.com/cuda-downloads
+    http://developer.download.nvidia.com/compute/cuda/9.2/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf
+    
+  - The CUDA Toolkit can be downloaded from URL: https://developer.nvidia.com/cuda-downloads
 
   - Get the latest nheqminer repository:
     git clone https://github.com/dwymi02/nheqminer.git
