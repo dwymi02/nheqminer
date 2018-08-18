@@ -217,8 +217,10 @@ void start_mining(int api_port, const std::string& host, const std::string& port
 	int c = 0;
 	while (sc.isRunning()) {
 		std::this_thread::sleep_for(std::chrono::milliseconds(10));
-		if (++c % 1000 == 0)
-		{
+
+		// Changed interval as to when speed is displayed from approx 12 seconds
+		// to approx 150 seconds [2.5 minutes]
+		if (++c % 12500 == 0)
 			double allshares = speed.GetShareSpeed() * 60;
 			double accepted = speed.GetShareOKSpeed() * 60;
 			BOOST_LOG_TRIVIAL(info) << CL_YLW "Speed [" << INTERVAL_SECONDS << " sec]: " <<
