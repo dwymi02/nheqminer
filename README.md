@@ -81,6 +81,7 @@ Example to CPU mine, using your own wallet and worker id, on nanopool USA server
         nheqminer -l zec-us-east1.nanopool.org:16666 -u YOUR_WALLET/YOUR_WORKER/YOUR_EMAIL@PROVIDER.com -p x -t [num_thrds]
 
 Additional information about mining ZEC on nanopool please refer to https://zec.nanopool.org/help
+
 Additional mining pools for your consideration available @ https://investoon.com/mining_pools/zec
 
 
