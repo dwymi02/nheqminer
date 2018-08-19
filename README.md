@@ -89,7 +89,8 @@ Working solvers CPU_TROMP, CPU_XENONCAT, CUDA_TROMP, CUDA_DJEZO
 ## Dependencies
 
 ### Runtime Dependencies required to start nheqminer
-  - NVIDIA CUDA toolkit
+  - NVIDIA CUDA toolkit.
+  
     Please refer to the build section which provides the reference material for installing the NVIDIA CUDA toolkit
 
     For the time being the NVIDA CUDA toolkit is required even if you only wish to CPU mine ZEC coin.
