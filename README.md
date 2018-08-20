@@ -165,6 +165,7 @@ Example to mine on your CPU as well on your CUDA GPUs with your own BTC address 
 
 ### Donations are greatly appreciated and will be humbly accepted as reward for our labors ...
 
+* BTC: `1HcQHQfhjmdTVBW6mYdsBP9esw3zns4S4u`
+* ETH: `0xef5aa02df61f419d5bf0d75bd5cf6ff3a3d83269`
 * ZEC: `t1PrZg5dBhcm7MfC21dcrRMxpD9tfzJiqAD`
 * XMR: `46NX5s3K6ZX7cv4tF8C8moTUm3QpwNjjjarXfqUNsibxGc9aas6bSdmZCMDRgG9BWcPwoQrhJfGRCK6PAJTtBKT8Lpxct8F`
-* BTC: `1HcQHQfhjmdTVBW6mYdsBP9esw3zns4S4u`
