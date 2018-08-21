@@ -220,7 +220,7 @@ void start_mining(int api_port, const std::string& host, const std::string& port
 
 		// Changed interval as to when speed is displayed from approx 12 seconds
 		// to approx 150 seconds [2.5 minutes]
-		if (++c % 12500 == 0)
+		if (++c % 12500 == 0) {
 			double allshares = speed.GetShareSpeed() * 60;
 			double accepted = speed.GetShareOKSpeed() * 60;
 			BOOST_LOG_TRIVIAL(info) << CL_YLW "Speed [" << INTERVAL_SECONDS << " sec]: " <<
