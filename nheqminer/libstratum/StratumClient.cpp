@@ -117,7 +117,14 @@ void StratumClient<Miner, Job, Solution>::workLoop()
                 //LogS("[WARN] Discarding incomplete response\n");
             }
         } catch (std::exception const& _e) {
-			BOOST_LOG_CUSTOM(warning) << _e.what();
+			BOOST_LOG_CUSTOM(warning)    << CL_RED
+                                         << _e.what()
+                                         << CL_N;
+            BOOST_LOG_CUSTOM(warning)    << CL_MA2
+                                         << "response failed ["
+                                         << m_response
+                                         << "]"
+                                         << CL_N;
             reconnect();
         }
     }
@@ -341,11 +348,17 @@ void StratumClient<Miner, Job, Solution>::processReponse(const Object& responseO
 			m_authorized = valRes.get_bool();
 		}
 		if (!m_authorized) {
-			BOOST_LOG_CUSTOM(error) << "Worker not authorized: " << p_active->user;
+			BOOST_LOG_CUSTOM(error)    << CL_MAG
+				                       << "Worker not authorized: "
+				                       << p_active->user
+                                       << CL_N;
 			disconnect();
 			return;
 		}
-		BOOST_LOG_CUSTOM(info) << "Authorized worker " << p_active->user;
+		BOOST_LOG_CUSTOM(info)    << CL_MAG
+                                  << "Authorized worker "
+                                  << p_active->user
+                                  << CL_N;
 
 		ss << "{\"id\":3,\"method\":\"mining.extranonce.subscribe\",\"params\":[]}\n";
 		std::string sss = ss.str();
@@ -397,7 +410,12 @@ template <typename Miner, typename Job, typename Solution>
 bool StratumClient<Miner, Job, Solution>::submit(const Solution* solution, const std::string& jobid)
 {
 	int id = std::atomic_fetch_add(&m_share_id, 1);
-	BOOST_LOG_CUSTOM(info) << "Submitting share #" << id << ", nonce " << solution->toString().substr(0, 64 - solution->nonce1size);
+	BOOST_LOG_CUSTOM(info)    << CL_GRN
+                              << "Submitting share #"
+                              << id
+                              << ", nonce "
+                              << solution->toString().substr(0, 64 - solution->nonce1size)
+                              << CL_N;
 
 	CDataStream ss(SER_NETWORK, PROTOCOL_VERSION);
 	ss << solution->nonce;
